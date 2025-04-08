@@ -25,6 +25,10 @@
     "type": "git",
     "url": "https://github.com/Gladesinger/flipbook-vue3.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "Flipbook",
     "Flipbook-vue",
