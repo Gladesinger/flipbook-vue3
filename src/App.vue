@@ -25,10 +25,10 @@ const pages = ref([
       :pages="pages"
       :gloss="0"
       :click-to-zoom="true"
-      alt="Книжка"
+      alt="Book"
     >
       <button
-        aria-label="Предыдущий"
+        aria-label="Left"
         class="flipbook-button button-prev"
         :class="{ disabled: !flipbook.canFlipLeft }"
         @click="flipbook.flipLeft"
@@ -36,7 +36,7 @@ const pages = ref([
         <IconArrow />
       </button>
       <button
-        aria-label="Следующий"
+        aria-label="Right"
         class="flipbook-button button-next"
         :class="{ disabled: !flipbook.canFlipRight }"
         @click="flipbook.flipRight"
@@ -50,15 +50,18 @@ const pages = ref([
 <style scoped>
 .slider-wrap {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .slider-wrap .flipbook {
-  width: 100%;
-  height: 410px;
   display: block;
+  position: relative;
+  width: calc(100% - 128px);
+  height: 410px;
+  margin: 0 auto;
 }
 
 .slider-wrap .flipbook img {

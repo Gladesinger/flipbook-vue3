@@ -1,3 +1,3 @@
-import FlipBook from './FlipBook.vue';
+import FlipBook from "./FlipBook.vue";
 export default FlipBook;
 export { FlipBook };
