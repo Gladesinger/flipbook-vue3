@@ -15,7 +15,7 @@ To ensure smooth performance, your web server should configure a cache policy fo
 To install this package, run the following command:
 
 ```bash
-npm i @gladesinger/flipbook-vue3
+npm i @gladesinger/flipbook-vue3@latest
 ```
 
 ## Usage
@@ -250,7 +250,7 @@ const pages = ref([])
 Чтобы установить этот пакет, выполните следующую команду:
 
 ```bash
-npm i @gladesinger/flipbook-vue3
+npm i @gladesinger/flipbook-vue3@latest
 ```
 
 ## Использование
