@@ -1,19 +1,46 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import FlipBook from '../lib/FlipBook.vue'
-import IconArrow from './components/IconArrow.vue'
+import { ref } from "vue";
+import FlipBook from "../lib/FlipBook.vue";
+import IconArrow from "./components/IconArrow.vue";
 
 // Array of image paths
-const pages = ref([])
+const pages = ref([
+  "/images/1.jpg",
+  "/images/2.jpg",
+  "/images/3.jpg",
+  "/images/4.jpg",
+  "/images/5.jpg",
+  "/images/6.jpg",
+  "/images/7.jpg",
+  "/images/8.jpg",
+  "/images/9.jpg",
+]);
 </script>
 
 <template>
   <div class="slider-wrap">
-    <FlipBook v-slot="flipbook" class="flipbook" :pages="pages" :gloss="0" :click-to-zoom="true" alt="Книжка">
-      <button aria-label="Предыдущий" class="flipbook-button button-prev" :class="{'disabled': !flipbook.canFlipLeft}" @click="flipbook.flipLeft">
+    <FlipBook
+      v-slot="flipbook"
+      class="flipbook"
+      :pages="pages"
+      :gloss="0"
+      :click-to-zoom="true"
+      alt="Book"
+    >
+      <button
+        aria-label="Left"
+        class="flipbook-button button-prev"
+        :class="{ disabled: !flipbook.canFlipLeft }"
+        @click="flipbook.flipLeft"
+      >
         <IconArrow />
       </button>
-      <button aria-label="Следующий" class="flipbook-button button-next" :class="{'disabled': !flipbook.canFlipRight}" @click="flipbook.flipRight">
+      <button
+        aria-label="Right"
+        class="flipbook-button button-next"
+        :class="{ disabled: !flipbook.canFlipRight }"
+        @click="flipbook.flipRight"
+      >
         <IconArrow />
       </button>
     </FlipBook>
@@ -23,15 +50,18 @@ const pages = ref([])
 <style scoped>
 .slider-wrap {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .slider-wrap .flipbook {
-  width: 100%;
-  height: 410px;
   display: block;
+  position: relative;
+  width: calc(100% - 128px);
+  height: 410px;
+  margin: 0 auto;
 }
 
 .slider-wrap .flipbook img {

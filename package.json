@@ -1,9 +1,11 @@
 {
   "name": "@gladesinger/flipbook-vue3",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/flipbook-vue3.umd.cjs",
   "module": "./dist/flipbook-vue3.js",
   "types": "./dist/main.d.ts",
@@ -22,6 +24,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Gladesinger/flipbook-vue3.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "Flipbook",

@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -59,9 +63,10 @@ button:focus-visible {
 }
 
 #app {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
 }
 
